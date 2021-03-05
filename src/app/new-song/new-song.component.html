@@ -1,0 +1,33 @@
+
+      <div class="container mt-3 col-sm-6 col-lg-3">
+          <h1>Add a new song:</h1>
+          <br>
+      <form>
+        <div class="mb-3">
+          <label class="form-label">Song title</label>
+          <input type="text" class="form-control" [(ngModel)]="this.newSongItemTitle" name="song-title">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Artist</label>
+            <input type="text" class="form-control" [(ngModel)]="this.newSongItemArtist" name="artist">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Min.</label>
+            <input type="text" class="form-control" [(ngModel)]="this.newSongItemMinutes" name="minutes">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Feature</label>
+            <input type="text" class="form-control" [(ngModel)]="this.newSongItemFeature" name="feature">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Release date</label>
+            <input type="text" class="form-control" [(ngModel)]="this.newSongItemDate" name="release-date">
+        </div>
+        
+        <button (click)="addSong()" class="btn btn-dark">Add</button>
+      </form>
+    </div>
+
+        
+        
+      

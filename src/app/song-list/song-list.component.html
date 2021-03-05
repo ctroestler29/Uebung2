@@ -1,0 +1,30 @@
+
+  <div class="container mt-5 col-sm-8 col-lg-5">
+    <h1>List of all your songs:</h1>
+    <br>
+    <table class="table">
+        <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Song title</th>
+        <th scope="col">Artist</th>
+        <th scope="col">Min.</th>
+        <th scope="col">Feature</th>
+        <th scope="col">Release date</th>
+        <th scope="col">Remove</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let song of SongItems$ | async">
+        <th scope="row"><a [routerLink]="[song.id]">{{song.id}}</a></th>
+        <td>{{song.title}}</td>
+        <td>{{song.artist}}</td>
+        <td>{{song._min}}</td>
+        <td>{{song._feature}}</td>
+        <td>{{song._date}}</td>
+        <td><button (click)="remove(song)">X</button></td>
+      </tr>
+    </tbody>
+  
+    </table>
+  </div>
